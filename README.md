@@ -2,6 +2,15 @@
 
 The design doc (Comment.js) is at public/Comment.js
 
+TO-DO: 
+```
+src/
+  CommentApp.js
+  CommentInput.js
+  CommentList.js
+  Comment.js
+ ```
+
 
 ## Original README from facebook's create-react-app:
 
