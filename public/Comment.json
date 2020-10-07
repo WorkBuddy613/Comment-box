@@ -5,6 +5,7 @@
             "CommentText": "String(200)"
         },
         "CommentList":{
+            "courseId": "String(10)",
             "List of Comment":
                 "Comment": {
                     "UserName",
@@ -13,3 +14,20 @@
         }
     }
 }
+
+Structure:
+/src
+    CommentApp.js
+    CommentInput.js
+    CommentList.js
+    Comment.js
+
+When referencing subscriptions.js from AWS Amplify, there are Comment attribute to discuss:
+1. it may also include commentId,  courseId, createdAt,  nextToken(instead of lists)
+2. may change "CommentText" > "Content"
+
+Note:
+1. `courseId` should be completed later together with Course.js
+    i.e. Course.js should have an export attribute that could provide current courseId
+2. `UserName` should  be completed later together with user authentication(user login)
+    i.e. Login function should have an export attribute that could provide current userName/userId
