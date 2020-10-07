@@ -1,0 +1,15 @@
+{
+    "CommentApp":{
+        "CommentInput":{
+            "UserName": checks String(10) & Non-NULL,
+            "CommentText": String(200)
+        },
+        "CommentList":{
+            "List of Comment":
+                "Comment": {
+                    "UserName",
+                    "CommentText"
+                }
+        }
+    }
+}
