@@ -1,8 +1,9 @@
-#This is the attempt for comment box
+# This is the attempt for comment box
+
+The design doc (Comment.js) is at public/Comment.js
 
 
-
-Original README from facebook's create-react-app:
+## Original README from facebook's create-react-app:
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
