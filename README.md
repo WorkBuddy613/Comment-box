@@ -1,15 +1,48 @@
-# This is the attempt for comment box
+# This is the attempt for comment-box
 
-The design doc (Comment.js) is at public/Comment.js
+## TO-RUN Locally
 
-TO-DO: 
+The commands should be similar to normal commands on the tutorial [Create React App](https://github.com/facebook/create-react-app)
+
+Make sure you have installed git, NodeJS, NPM locally
+
+i.e.
 ```
-src/
-  CommentApp.js
-  CommentInput.js
-  CommentList.js
-  Comment.js
- ```
+git clone https://github.com/WorkBuddy613/Comment-box.git
+cd Comment-box
+git checkout comment-box
+npm install
+npm start
+```
+
+Then you should find the website at https://localhost:3000
+
+## Test
+
+<div align="center">
+  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/inputComment.gif" width="700px" />
+  <p>InputComment</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/submitWithoutUsername.gif" width="700px" />
+  <p>SubmitWithoutUsername </p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/submitWithoutComment.gif" width="700px" />
+  <p>SubmitWithoutComment </p>
+</div>
+
+## Note
+
+Main design code is at ["public/Comment.json"](https://github.com/WorkBuddy613/Comment-box/blob/comment-box/public/Comment.json)
+
+This code reference https://github.com/huzidaha/react-naive-book-examples/tree/master/comment-app
+
+It's almost a duplicate of ⬆️   code just add more comments for code.
+
+
 
 
 ## Original README from facebook's create-react-app:
