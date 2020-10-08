@@ -1,15 +1,15 @@
 {
     "CommentApp":{
         "CommentInput":{
-            "UserName": "checks String(10) & Non-NULL",
-            "CommentText": "String(200)"
+            "username": "NON-NULL",
+            "comment": "NON-NULL"
         },
         "CommentList":{
-            "courseId": "String(10)",
-            "List of Comment":
-                "Comment": {
-                    "UserName",
-                    "CommentText"
+            "courseId": "String(10)", //has not been implemented yet
+            "Comments":
+                List of "Comment": {
+                    "username",
+                    "comment"
                 }
         }
     }
@@ -24,10 +24,10 @@ Structure:
 
 When referencing subscriptions.js from AWS Amplify, there are Comment attribute to discuss:
 1. it may also include commentId,  courseId, createdAt,  nextToken(instead of lists)
-2. may change "CommentText" > "Content"
+2. may change attribute name:  Comment.comment -> Comment.context
 
 Note:
 1. `courseId` should be completed later together with Course.js
     i.e. Course.js should have an export attribute that could provide current courseId
-2. `UserName` should  be completed later together with user authentication(user login)
+2. `Username` should  be completed later together with user authentication(user login)
     i.e. Login function should have an export attribute that could provide current userName/userId
