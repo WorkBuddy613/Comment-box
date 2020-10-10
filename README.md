@@ -1,5 +1,13 @@
 # This is the attempt for comment-box
 
+## Design structure
+
+<div align="center">
+  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/CommentsApp.png" width="700px" />
+  <p>CommentApp detailed design</p>
+</div>
+
+
 ## TO-RUN Locally
 
 The commands should be similar to normal commands on the tutorial [Create React App](https://github.com/facebook/create-react-app)
@@ -34,12 +42,6 @@ Then you should find the website at https://localhost:3000
   <p>SubmitWithoutComment </p>
 </div>
 
-## Design structure
-
-<div align="center">
-  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/CommentsApp.png" width="700px" />
-  <p>Comment detailed design</p>
-</div>
 
 ## Note
 
