@@ -45,7 +45,7 @@ Then you should find the website at https://localhost:3000
 
 ## Note
 
-Main design code is at ["public/Comment.json"](https://github.com/WorkBuddy613/Comment-box/blob/comment-box/public/Comment.json)
+Main design code is at ["public/Comment.json"](https://github.com/WorkBuddy613/Comment-box/blob/comment-box/public/Comment.json) or the img above(public/CommentsApp.png)
 
 This code reference https://github.com/huzidaha/react-naive-book-examples/tree/master/comment-app
 
