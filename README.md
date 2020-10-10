@@ -17,7 +17,7 @@ npm start
 
 Then you should find the website at https://localhost:3000
 
-## Test
+## What it should look like:
 
 <div align="center">
   <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/inputComment.gif" width="700px" />
@@ -32,6 +32,13 @@ Then you should find the website at https://localhost:3000
 <div align="center">
   <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/submitWithoutComment.gif" width="700px" />
   <p>SubmitWithoutComment </p>
+</div>
+
+## Design structure
+
+<div align="center">
+  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/CommentsApp.png" width="700px" />
+  <p>Comment detailed design</p>
 </div>
 
 ## Note
