@@ -39,7 +39,7 @@ class CommentInput extends Component {
                 comment: this.state.comment,
             })
         }
-        this.setState({ username: '', comment: ''})
+        this.setState({ comment: '' })
     }
 
     render(){
