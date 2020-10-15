@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-commentbox-dev-155553-authRole",
+      "UnauthRoleArn": "arn:aws:iam::765759597501:role/amplify-commentbox-dev-155553-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::765759597501:role/amplify-commentbox-dev-155553-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-commentbox-dev-155553-deployment",
+      "UnauthRoleName": "amplify-commentbox-dev-155553-unauthRole",
+      "StackName": "amplify-commentbox-dev-155553",
+      "StackId": "arn:aws:cloudformation:us-east-1:765759597501:stack/amplify-commentbox-dev-155553/9b704a70-0b32-11eb-bd88-122daaaef175",
+      "AmplifyAppId": "d3spp65mw1h9ep"
+    },
+    "categories": {
+      "auth": {
+        "commentbox666014c1": {}
+      }
+    }
+  }
+}

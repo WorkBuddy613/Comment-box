@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import CommentApp from './CommentApp';
 import * as serviceWorker from './serviceWorker';
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
 
 ReactDOM.render(
     <CommentApp />,
@@ -13,3 +17,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+export default withAuthenticator(App, true);
