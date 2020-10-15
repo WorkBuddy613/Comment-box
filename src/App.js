@@ -1,26 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CommentApp from './CommentApp'
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'; // For user-authentication logIn, logOut
+import Amplify, { Auth } from 'aws-amplify';        //Auth might be deleted
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <CommentApp />,
+    <AmplifySignOut />
     </div>
+    //document.getElementById('root')
   );
 }
 
-export default App;
+export default withAuthenticator(App);

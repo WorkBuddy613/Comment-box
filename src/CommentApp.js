@@ -4,6 +4,7 @@ import CommentInput from './CommentInput';
 import CommentList from './CommentList';
 import 'tachyons';
 
+
 class CommentApp extends Component {
 
     constructor(){ //father initialize + set attribute-comments
