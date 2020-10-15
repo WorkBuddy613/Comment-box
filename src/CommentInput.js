@@ -13,20 +13,12 @@ class CommentInput extends Component {
         }).then(user => {
             console.log(user);
             this.setState({
-            username: user.username
+            username: user.username  //this will get current username
                 })
             })
         .catch(err => console.log(err));
     {/*Note: on default, react use state to record anything with state*/}
     }
-
-
-
-    // handleUsernameChange (event){ //Listen for username change (i.e. user enters username)
-    //     this.setState({
-    //         username:event.target.value
-    //     })
-    // }
 
     handleCommentChange (event) { //Listen for comment change (i.e. user enters comment)
         this.setState({
@@ -36,9 +28,6 @@ class CommentInput extends Component {
 
     handleSubmit (event){   //Listen for Submit button (i.e. user clicks on submit)
         if (this.props.onSubmit){
-            //const { username, comment } = this.state
-            //console.log("Is going to submit", this.state.username, this,state.comment)
-            //check username is not NULL, comment is not NULL
             if (!this.state)
                 return
             if (!this.state.username) 
@@ -59,16 +48,8 @@ class CommentInput extends Component {
             <div className='comment-input'>
                 <div className='comment-field'>
                     <span className='comment-field-name'>Username:</span>
-                    <p> {this.state.username} </p>
-                    {
-                        //<div className='comment-field-input'>
-                        // <input 
-                        // value={this.state.username}
-                        // onChange={this.handleUsernameChange.bind(this)}
-                        // />
-                        // </div>
-                    }
-                    {/*Note: This username should be getting from user authentication in the future*/}
+                    <p> {this.state.username} </p> 
+                {/*Note: This part is only for demo purpose. It will be removed/redesigned in the future*/}
                 </div>
                 <div className='comment-field'>
                     <span className='comment-field-name'>Comment: </span>
