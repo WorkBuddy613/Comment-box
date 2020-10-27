@@ -27,6 +27,8 @@ Then you should find the website at https://localhost:3000
 
 ## What it should look like:
 
+### initial commit
+
 <div align="center">
   <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/inputComment.gif" width="700px" />
   <p>InputComment</p>
@@ -41,6 +43,9 @@ Then you should find the website at https://localhost:3000
   <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/submitWithoutComment.gif" width="700px" />
   <p>SubmitWithoutComment </p>
 </div>
+
+### 10.20 add authentication + getUser
+
 
 
 ## Note
