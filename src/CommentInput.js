@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Auth } from 'aws-amplify';
 
 class CommentInput extends Component {
     constructor(){
@@ -7,15 +8,16 @@ class CommentInput extends Component {
             username: '',
             comment: ''
         }
+        Auth.currentAuthenticatedUser({
+            bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+        }).then(user => {
+            console.log(user);
+            this.setState({
+            username: user.username  //this will get current username
+                })
+            })
+        .catch(err => console.log(err));
     {/*Note: on default, react use state to record anything with state*/}
-    }
-
-
-
-    handleUsernameChange (event){ //Listen for username change (i.e. user enters username)
-        this.setState({
-            username:event.target.value
-        })
     }
 
     handleCommentChange (event) { //Listen for comment change (i.e. user enters comment)
@@ -26,9 +28,6 @@ class CommentInput extends Component {
 
     handleSubmit (event){   //Listen for Submit button (i.e. user clicks on submit)
         if (this.props.onSubmit){
-            //const { username, comment } = this.state
-            //console.log("Is going to submit", this.state.username, this,state.comment)
-            //check username is not NULL, comment is not NULL
             if (!this.state)
                 return
             if (!this.state.username) 
@@ -40,22 +39,17 @@ class CommentInput extends Component {
                 comment: this.state.comment,
             })
         }
-        this.setState({ username: '', comment: ''})
+        this.setState({ comment: '' })
     }
 
     render(){
+        
         return (
             <div className='comment-input'>
                 <div className='comment-field'>
-                {/*flex pa1 are tachyons' attributes. You may Google to find examples of it*/}
                     <span className='comment-field-name'>Username:</span>
-                    <div className='comment-field-input'>
-                        <input 
-                        value={this.state.username}
-                        onChange={this.handleUsernameChange.bind(this)}
-                        />
-                    </div>
-                    {/*Note: This username should be getting from user authentication in the future*/}
+                    <p> {this.state.username} </p> 
+                {/*Note: This part is only for demo purpose. It will be removed/redesigned in the future*/}
                 </div>
                 <div className='comment-field'>
                     <span className='comment-field-name'>Comment: </span>
