@@ -4,3 +4,9 @@ type Todo @model {
   description: String
   priority: String
 }
+
+type Comment @model {
+    id: ID!
+    username: String!
+    content: String
+}

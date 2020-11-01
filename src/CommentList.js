@@ -14,11 +14,11 @@ class CommentList extends Component {
       // {username: 'Lucy', comment: 'Good'}
       // ]
       //comments = this.props.comments
-
+      console.log(this.props.comments);
         return (
             <div> 
                 {this.props.comments.map((comment, i) => 
-                    <Comment comment={comment} key={i} />
+                    <Comment comment={comment} />
                     )}
                     {
                     //if without `Comment` Code should be like:
