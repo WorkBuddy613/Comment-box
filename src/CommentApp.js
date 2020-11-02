@@ -15,7 +15,7 @@ input: comment e.g. {username: 'huangxiao', content: 'my 1st comment'}
 */
 
 async function createNewComment(comment){
-    const newCommentDetails = { username: comment.username, content: comment.comment};
+    const newCommentDetails = { username: comment.username, content: comment.content};
     const newComment = await API.graphql(graphqlOperation(createComment, {input: newCommentDetails}));  
     /*
     createComment learning note:
@@ -51,7 +51,6 @@ class CommentApp extends Component {
         }
         listCurrentComments().then((evt) => {
                 evt.data.listComments.items.map((comment, i)=> {
-                    console.log(comment);
                     this.state.comments.push({username: comment.username, content: comment.content});
                 });
                 this.setState({
@@ -72,7 +71,7 @@ class CommentApp extends Component {
         this.setState({
             comments: this.state.comments
         })
-        console.log("SubmitComment finishes, currently there are %d comments in total",Object.keys(this.state.comments).length)
+        console.log("SubmitComment finishes, currently there are %d comments in total", Object.keys(this.state.comments).length)
     }
 
     render() {
