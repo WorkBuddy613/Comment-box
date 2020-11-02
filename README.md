@@ -1,33 +1,7 @@
 # This is the attempt for comment-box
 
-## Design structure
 
-<div align="center">
-  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/CommentsApp.png" width="700px" />
-  <p>CommentApp detailed design</p>
-</div>
-
-
-## TO-RUN Locally
-
-The commands should be similar to normal commands on the tutorial [Create React App](https://github.com/facebook/create-react-app)
-
-Make sure you have installed git, NodeJS, NPM locally
-
-i.e.
-```
-git clone https://github.com/WorkBuddy613/Comment-box.git
-cd Comment-box
-git checkout comment-box
-npm install
-npm start
-```
-
-Then you should find the website at https://localhost:3000
-
-## What it should look like:
-
-### initial commit
+## initial commit
 
 <div align="center">
   <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/inputComment.gif" width="700px" />
@@ -44,8 +18,66 @@ Then you should find the website at https://localhost:3000
   <p>SubmitWithoutComment </p>
 </div>
 
-### 10.20 add authentication + getUser
+## 10.20 add authentication + getUser
 
+### To play with the public website online
+
+https://getcurrentuser.d3spp65mw1h9ep.amplifyapp.com/
+<div align="center">
+ <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/addGetUserInfo.png"  width="700px" />
+ <p>mainChange: could fetch userInfo from Auth.currentAuthenticatedUser</p>
+</div>
+
+### To run locally
+
+U may need to follow the [tutorial(part 1-3)](https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/) to install Amplify CLI then run `npm start`
+
+### Notes:
+
+1. Main API used from Amplify:
+
+Auth.currentAuthenticatedUser(): https://docs.amplify.aws/lib/auth/manageusers/q/platform/js#retrieve-current-authenticated-user
+
+2. Previous commits about authentication setup:
+
+https://github.com/WorkBuddy613/Comment-box/commit/5ffb74563664bf1fa6c93414e5de9e176e0a7ac4
+
+## 11.1 add database(GraphQL) and support multi-user posting&storage comment
+
+### What's new this time:
+
+- Database on AWS created 
+- Now support multi-user posting & storage comment
+
+### public website to play with:  
+
+https://graphqldemo.d3spp65mw1h9ep.amplifyapp.com/
+<div align="center">
+ <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/addGraphQL.png"  width="700px" />
+ <p>mainChange: could store data on cloud</p>
+</div>
+
+
+### Main code of this commit:
+
+1. [CommentApp.js](src/CommentApp.js) which contains main frontend code including upload&download 
+2.  [schema.graphql](amplify/backend/api/myAPI/schema.graphql) which contains main database code
+
+### Learning resource for GraphQL x React:
+
+1. Start with this tutorial first: https://docs.amplify.aws/start/getting-started/installation/q/integration/js#install-and-configure-the-amplify-cli
+    My updates in CommentApp.js is mainly from this
+
+2. Then this one: https://docs.amplify.aws/lib/graphqlapi/advanced-workflows/q/platform/js#complex-objects
+You may find my notes for this tutorial in [GraphQLDemo.js](src/GraphQLDemo.js) and [GraphQLConfiguration.js](src/GraphQLClientConfiguration.js)
+
+
+## Design structure
+
+<div align="center">
+  <img src="https://github.com/WorkBuddy613/Comment-box/blob/main/public/CommentsApp.png" width="700px" />
+  <p>CommentApp detailed design</p>
+</div>
 
 
 ## Note
