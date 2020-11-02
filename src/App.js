@@ -20,9 +20,7 @@ function App() {
   return (
     <div>
     <CommentApp />,
-    <GraphQLDemo />,
     <AmplifySignOut />
-
     </div>
     //document.getElementById('root')
   );
