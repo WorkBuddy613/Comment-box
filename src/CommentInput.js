@@ -6,7 +6,7 @@ class CommentInput extends Component {
         super()
         this.state = {
             username: '',
-            comment: ''
+            content: ''
         }
         Auth.currentAuthenticatedUser({
             bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
@@ -20,9 +20,9 @@ class CommentInput extends Component {
     {/*Note: on default, react use state to record anything with state*/}
     }
 
-    handleCommentChange (event) { //Listen for comment change (i.e. user enters comment)
+    handleCommentChange (event) { //Listen for content change (i.e. user enters content)
         this.setState({
-            comment:event.target.value
+            content:event.target.value
         })
     }
 
@@ -32,14 +32,14 @@ class CommentInput extends Component {
                 return
             if (!this.state.username) 
                 return alert('Username is empty')
-            if (!this.state.comment)
-                return alert('Please enter your comment')
+            if (!this.state.content)
+                return alert('Please enter your content')
             this.props.onSubmit({
                 username: this.state.username, 
-                comment: this.state.comment,
+                content: this.state.content,
             })
         }
-        this.setState({ comment: '' })
+        this.setState({ content: '' })
     }
 
     render(){
@@ -55,7 +55,7 @@ class CommentInput extends Component {
                     <span className='comment-field-name'>Comment: </span>
                     <div className='comment-field-input'>
                         <textarea 
-                        value={this.state.comment}
+                        value={this.state.content}
                         onChange={this.handleCommentChange.bind(this)}
                         />
                     </div>

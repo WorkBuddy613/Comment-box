@@ -1,4 +1,22 @@
 {
+  "clarette": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-commentbox-clarette-172729-authRole",
+      "UnauthRoleArn": "arn:aws:iam::765759597501:role/amplify-commentbox-clarette-172729-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::765759597501:role/amplify-commentbox-clarette-172729-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-commentbox-clarette-172729-deployment",
+      "UnauthRoleName": "amplify-commentbox-clarette-172729-unauthRole",
+      "StackName": "amplify-commentbox-clarette-172729",
+      "StackId": "arn:aws:cloudformation:us-east-1:765759597501:stack/amplify-commentbox-clarette-172729/b42ee080-0f0b-11eb-b6e3-0a39c55408a9",
+      "AmplifyAppId": "d3spp65mw1h9ep"
+    },
+    "categories": {
+      "auth": {
+        "commentbox666014c1": {}
+      }
+    }
+  },
   "dev": {
     "awscloudformation": {
       "AuthRoleName": "amplify-commentbox-dev-155553-authRole",
