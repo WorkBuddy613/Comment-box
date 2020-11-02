@@ -8,25 +8,21 @@ class CommentList extends Component {
         }
         
     render(){
-      //   const comments = [
-      //    {username: 'Jerry', comment: 'Hello'},
-      // {username: 'Tomy', comment: 'World'},
-      // {username: 'Lucy', comment: 'Good'}
-      // ]
-      //comments = this.props.comments
-      console.log(this.props.comments);
         return (
             <div> 
                 {this.props.comments.map((comment, i) => 
-                    <Comment comment={comment} />
+                    <Comment comment={comment} key={i} />
                     )}
                     {
-                    //if without `Comment` Code should be like:
-                    //return (
-                    //    <div key={i}>
-                    //        {comment.username}: {comment.comment}
-                     //   </div>
-                     //   )})
+                    /*
+                    Note:
+                    if without `Comment` Code should be like:
+                    return (
+                       <div key={i}>
+                           {comment.username}: {comment.comment}
+                       </div>
+                       )})
+                      */
                     }
             </div>
             )
